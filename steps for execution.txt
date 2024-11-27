@@ -1,0 +1,33 @@
+To compile and execute a C program on a Linux system, you typically use a series of commands in the terminal. Here are the steps:
+
+1. Open the Terminal
+
+    You can usually open the terminal from your application menu or by using a shortcut like Ctrl+Alt+T.
+
+2. Navigate to the Directory
+
+    Use the cd (change directory) command to navigate to the directory where your C file is located.
+
+3. Compile the C Program
+
+    Use the gcc (GNU Compiler Collection) command to compile your C file.
+
+    gcc -o outputfile inputfile.c
+
+eg: gcc -o myprogram myprogram.c
+
+4. Check for Compilation Errors
+
+    If there are errors in your code, gcc will display them. You'll need to fix these errors in your C file and recompile.
+
+5. Execute the Compiled Program
+
+    Use the ./ (current directory) prefix to run the compiled program.
+    eg: ./myprogram
+6. Optional: Clean Up
+
+    If you want to remove the compiled executable file, you can use the rm command.
+    eg: rm myprogram
+
+
+

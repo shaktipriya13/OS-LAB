@@ -1,0 +1,55 @@
+/*Output:
+Enter The No Of Process :3
+Enter The Burst Time (in ms) For Process # 1 :10
+Enter The Burst Time (in ms) For Process # 2 :30
+Enter The Burst Time (in ms) For Process # 3 :20
+
+Process         Waiting Time    TurnAround Time 
+                (in ms)         (in ms)
+Process # 1     0              10             
+Process # 2     10             40             
+Process # 3     40             60             
+
+*/
+
+/*Detailed Calculation
+
+    Process 1:
+        Burst Time = 10 ms
+        Completion Time = 10 ms (starts at 0 ms and finishes at 10 ms)
+        Waiting Time = 0 ms (starts execution immediately)
+        Turnaround Time = Completion Time = 10 ms
+
+    Process 2:
+        Burst Time = 20 ms
+        Completion Time = 10 ms (previous completion) + 20 ms (burst) = 30 ms
+        Waiting Time = 10 ms (waiting while Process 1 was executing)
+        Turnaround Time = Completion Time = 30 ms
+
+    Process 3:
+        Burst Time = 30 ms
+        Completion Time = 30 ms (previous completion) + 30 ms (burst) = 60 ms
+        Waiting Time = 30 ms (waiting while Process 1 and Process 2 were executing)
+        Turnaround Time = Completion Time = 60 ms
+
+    Process 4:
+        Burst Time = 22 ms
+        Completion Time = 60 ms (previous completion) + 22 ms (burst) = 82 ms
+        Waiting Time = 60 ms (waiting while Process 1, 2, and 3 were executing)
+        Turnaround Time = Completion Time = 82 ms
+
+    Process 5:
+        Burst Time = 0 ms
+        Completion Time = 82 ms (previous completion) + 0 ms (burst) = 82 ms
+        Waiting Time = 82 ms (waiting while Process 1, 2, 3, and 4 were executing)
+        Turnaround Time = Completion Time = 82 ms
+
+Averages Calculation
+
+    Average Waiting Time:
+    Average Waiting Time=Total Waiting TimeNumber of Processes=0+10+30+60+825=36.4 ms
+    Average Waiting Time=Number of ProcessesTotal Waiting Time​=50+10+30+60+82​=36.4 ms
+
+    Average Turnaround Time:
+    Average Turnaround Time=Total Turnaround TimeNumber of Processes=10+30+60+82+825=52.8 ms
+    Average Turnaround Time=Number of ProcessesTotal Turnaround Time​=510+30+60+82+82​=52.8 ms*/
